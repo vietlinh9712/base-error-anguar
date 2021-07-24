@@ -83,7 +83,7 @@
       }
     },
     "typedef": [
-      true,
+      false,
       "call-signature"
     ],
     "typedef-whitespace": {
@@ -137,10 +137,7 @@
     "use-lifecycle-interface": true,
     "use-pipe-transform-interface": true,
     "directive-selector": [
-      true,
-      "attribute",
-      "app",
-      "camelCase"
+      false
     ],
     "component-selector": [
       true,

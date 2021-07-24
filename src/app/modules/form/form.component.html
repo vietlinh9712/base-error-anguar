@@ -1,0 +1,4 @@
+<form [formGroup]="form">
+  <input formControlName="test" />
+  <button type="submit" [disabled]="!form.valid">Save</button>
+</form>
