@@ -36,17 +36,15 @@ export class ControlErrorsDirective implements OnInit, OnDestroy {
     ).pipe(
       takeUntil(this.destroy$)).subscribe((v) => {
         const controlErrors = this.control.errors;
-        console.log(controlErrors);
-
         if (controlErrors) {
-          const firstKey = Object.keys(controlErrors).filter(x => x !== 'errorMessage')[0];
+          const firstKey = Object.keys(controlErrors)[0];
           const getError = this.errors[firstKey];
           const text = controlErrors.errorMessage || this.customErrors[firstKey] || getError(controlErrors[firstKey]);
           this.setError(text);
         } else if (this.ref) {
           this.setError(null);
         }
-      })
+      });
   }
 
   get control(): any {

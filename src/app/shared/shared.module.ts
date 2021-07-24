@@ -4,6 +4,7 @@ import { ControlErrorsDirective } from './directives/validate-form.directive';
 import { ControlErrorContainerDirective } from './directives/control-error-container.directive';
 import { ControlErrorComponent } from './components/control-error/control-error.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormSubmitDirective } from './directives/form-submit.directive';
 
 @NgModule({
   imports: [
@@ -14,11 +15,13 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   declarations: [
     ControlErrorsDirective,
     ControlErrorContainerDirective,
-    ControlErrorComponent
+    ControlErrorComponent,
+    FormSubmitDirective
   ],
   exports: [
     ControlErrorsDirective,
     ControlErrorContainerDirective,
+    FormSubmitDirective,
     ReactiveFormsModule,
     FormsModule
   ]
